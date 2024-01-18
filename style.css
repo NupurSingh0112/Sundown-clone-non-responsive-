@@ -1,0 +1,490 @@
+@font-face {
+    font-family: neu;
+    src: url(assets/NeueHaasDisplayMediu.ttf);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neu;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 4vw;
+    color: orangered;
+    background: transparent;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+#main {
+    position: relative;
+    z-index: 10;
+    background-color: black;
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw;
+}
+
+nav {
+    padding: 2vw 0vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+
+}
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4{
+    padding: 10px 20px;
+    border: 1px solid rgb(192, 187, 187);
+    border-radius: 50px;
+    font-weight: lighter;
+    color: rgb(56, 52, 52);
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 17px;
+}
+
+#nav-part2 h4:hover{
+    color: white;
+    background-color: black; 
+}
+
+#center{
+    margin-top: 10vh;
+    height: 73vh;
+    width:100%;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 3.3vw;
+}
+
+#left h3{
+    width: 25vw;
+    font-size: 1.8vw;
+    line-break: 2vw;
+    line-height: 4vh;
+}
+
+#right h1{
+    font-size: 10vw;
+    line-height: 8vw;
+    text-align: right;
+}
+
+#hero-shape {
+    position: absolute;
+    right: 0;
+    width: 50vw;
+    height: 37vw;
+    margin: -3%;
+    top: 94vh;
+}
+
+#hero-1{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color:orangered;
+    filter: blur(15px);
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+#hero-2 {
+    background: linear-gradient(orangered, #ff4e1de4);
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime;
+    animation-duration: 2.5s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero-3 {
+    background: linear-gradient(#FE320A, #fe3f0a);
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+@keyframes anime2 {
+    from {
+        transform: translate(40%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+#page1 video{
+    position: relative;
+    width: 100%;
+    margin-top: 10vh;
+    border-radius: 25px;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 8vw 0;
+    position: relative;
+}
+
+#moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+
+.con{
+    white-space: nowrap;
+    display:inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes move {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform:translateX(-100%)
+    }
+}
+
+#moving-text h1{
+    font-size: 10vw;
+    display:inline-block;
+}
+
+#dot{
+    background-color: orangered;
+    height: 7vw;
+    width: 7vw;
+    border-radius: 50%;
+    display: inline-block;
+    margin:0.5vw 2vw;
+}
+
+#page2-bottom{
+    position: relative;
+    z-index: 9;
+    margin-top: 7vh;
+    margin-left: 3vw;
+    padding: 4.5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80vh;
+    width: 100%;
+}
+
+#bottom1 h1{
+    font-size: 10vh;
+    line-height: 8vh;
+    width:75%;
+}
+
+#bottom2{
+    margin-top: 33vh;
+    width: 55%;
+    margin-right: 10vw;
+}
+
+#bottom2 img{
+    border-radius: 5%;
+    width:18vw;
+    height: auto;
+}
+
+#bottom2 p{
+    margin-top: 5vh;
+    font-weight: -200;
+    font-size: 2.5vh;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#page2 #obj{
+    width: 35vw;
+    height:35vw;
+    position: absolute;
+    top: 60%;
+    left: 23%;
+    border-radius: 50%;
+    background: linear-gradient(orangered,rgb(255, 102, 0));
+    filter: blur(25px);
+    animation-name: obj1;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes obj1 {
+    from{
+        transform: translate(6%,-6%) skew(0);
+    }
+    to{
+        transform: translate(-6%,6%) skew(-8deg);
+    }    
+}
+
+#page3 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 4vw 0;
+    margin-bottom: 0%;
+}
+
+.elem {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid #38383864;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.elem .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: orangered;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.25s;
+}
+
+.elem:hover .overlay {
+    top: 0;
+}
+
+#fixed-image {
+    height: 30vw;
+    width: 24vw;
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+
+#page4 {
+    height: 110vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    margin-top: 7%;
+    border-top: none;
+
+}
+#box{
+    position: relative;
+    background-color: black;
+    display: flex;
+    padding: 3vw ;
+    margin-top: 7vw;
+    margin-left: 2.7em ;
+    border-radius: 1.5em;
+    height: 110vh;
+    width: 94vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#info1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 45%;
+}
+
+#h1info{
+    flex-direction: column;
+    margin-top: -4vh;
+    margin-left: -7vw;
+    width: 50%;
+    height: 30vh;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+#info1 h1{
+    font-size: 4.5vw;
+    line-height: 96%;
+    color: rgb(71, 65, 65);
+}
+
+#info1 #design{
+    color: white;
+}
+
+#pinfo{
+    width: 65%;
+    height: 30vh;
+    font-weight: -1000; 
+    margin-top: 3.7vh;
+    margin-left: -1vw;
+    font-size: 2.5vh;
+}
+
+#infoimg {
+    border-radius: inherit;
+    margin: -3.45%;
+    height: 113.43%;
+    width: 65%;
+    overflow: hidden;
+    padding: 0%;
+}
+
+#infoimg img {
+    width: 103%;
+    height: 107%;
+    margin: 0%;
+    margin-right: -5%;
+}
+
+#page5{
+    height: 79vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 10vw 2vw;
+}
+
+.swiper {
+    margin-left: 3vw;
+    width: 100%;
+    height: 49vh;
+  }
+
+  .swiper-slide {
+    border-left: 0.7px solid rgb(161, 157, 157);
+    font-size: 2.6vh;
+    max-width: 20%;
+    height: 42.5vh;
+    padding-left: 2vw;
+    text-align: left;
+    background:#EFEAE3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .swiper-slide :nth-child(6) p{
+    margin-top: 0%;
+  }
+
+
+
+
+
