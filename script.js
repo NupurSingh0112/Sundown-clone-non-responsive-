@@ -44,11 +44,4 @@ var swiper = new Swiper(".mySwiper", {
       el: ".swiper-pagination",
       clickable: true,
     },
-    on: {
-      reachEnd: function () {
-        if (swiper.isEnd) {
-          swiper.pagination.lock();
-        }
-      },
-    },
   });
